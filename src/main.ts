@@ -6,7 +6,6 @@ import './time'
 const addList = document.querySelector<HTMLButtonElement>("#addBtn");
 const input = document.querySelector<HTMLInputElement>("#input")
 const listCont = document.querySelector<HTMLDivElement>(".listContainer")
-const span = document.querySelector<HTMLSpanElement>('span')
 
 if (!addList || !input ||!listCont) {
       throw new Error("Issues with the HTM selectors")
