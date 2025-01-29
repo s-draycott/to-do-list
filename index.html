@@ -3,22 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./src/content/1950715.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My To-Do List</title>
   </head>
-  <body>
+  <body class="entirePage">
     <div class="toDoListContainer">
-      <h1><img src="src/content/1950715.png"/>Good <span id="timeOfDay"></span> this is your To-Do list for the day:</h1>
-      <h2>Your random fact for the day:</h2>
-      <button id="revealJokeBtn">Tell me a joke</button>
-        <p id="getJoke"></p>
-        <p id="getPunchline"></p>
-      <input placeholder="Add your task here"><button>Add</button>
+      <div class = "headingContainer">
+        <h1 class="headingContainer headingContainer__mainHeading">Good <span class="headingContainer headingContainer__mainHeading" id="timeOfDay"></span></h1>
+        <span class="headingContainer headingContainer__icon" id="imgContainer"></span>
+      </div>
+      <div class="api">
+        <button class="api api__btn" id="revealJokeBtn">Reveal the joke of the day</button>
+          <p class="api api__joke" id="getJoke"></p>
+          <p class="api api__joke" id="getPunchline"></p>
+      </div>
+      <h2 class="mainHeading mainHeading__subheading"><img src="src/content/1950715.png" /> This is your To-Do list for the day:</h2>
+      <div class="inputContainer">  
+        <input id="input" class="inputContainer inputContainer__input" placeholder="Add your task here">
+        <button id="addBtn" class="inputContainer inputContainer__addBtn">Add</button>
+      </div>
       <div class="listContainer">
-        <li>task1</li>
-        <li>task2</li>
-        <li>task3</li>
-
+        <ul></ul>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
