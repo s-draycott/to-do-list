@@ -1,3 +1,191 @@
+/* SCSS HEX */
+$white-smoke: #eff1edff;
+$drab-dark-brown: #373d20ff;
+$reseda-green: #717744ff;
+$sage: #bcbd8bff;
+$umber: #766153ff;
+
+$web: 600px;
+
+* {
+    font-family: "Montserrat", serif;
+    color: $drab-dark-brown;
+}
+
+
+// need to change when adding other Imgs
 img {
-    width: 3vh;
+    width: 40px;
+    height: 40px;
+    @media only screen and (min-width: ($web + 1px)) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    background-image: url(./content/background.png);
+    background-size: calc(100vw + 100vh);
+}
+
+button {
+    background-color: $drab-dark-brown;
+    color: $white-smoke;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    @media only screen and (min-width: ($web + 1px)) {
+            font-size: 18px;
+    }
+}
+
+.headingContainer {
+    display: flex;
+    align-items: center;
+
+    &__mainHeading {
+        font-family: "Italiana", serif;
+        font-weight: 400;
+        font-size: 28px;
+        font-style: normal;
+        margin: 5px;
+
+        @media only screen and (min-width: ($web + 1px)) {
+            font-size: 72px;
+        }
+    }
+    &__icon {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.mainHeading {
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-size: 28px;
+    font-style: normal;
+    margin: 5px;
+    @media only screen and (min-width: ($web + 1px)) {
+            font-size: 72px;
+        }
+
+    &__subheading{
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px 30px 0px;
+        @media only screen and (min-width: ($web + 1px)) {
+                font-size: 36px;
+            }
+    }
+}
+
+.toDoListContainer {
+    width: 60vw;
+    height: 70vh;
+    background-color:$white-smoke;
+    border-radius: 20px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    background-color: rgb(200, 200, 179);
+    border-radius: 20px;
+
+    &__addBtn {
+        background-color: $drab-dark-brown;
+    }
+
+    &__input {
+        flex: 1;
+        border: 0pt;
+        padding: 10px;
+        outline: none;
+        background-color: transparent;
+        border-radius: 20px;
+        color: $drab-dark-brown;
+        font-size: 12px;
+        @media only screen and (min-width: ($web + 1px)) {
+            font-size: 18px;
+        }
+    }
+}
+
+.api {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    font-size: 2.5vw;
+
+    &__btn {
+        font-weight: 500;
+        font-size: 12px;
+        @media only screen and (min-width: ($web + 1px)) {
+            font-size: 20px;
+        }
+    }
+    &__joke {
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        color: $umber;
+        justify-content: center;
+        @media only screen and (min-width: ($web + 1px)) {
+            font-size: 24px;
+        }
+    }
+}
+
+li {
+    list-style: none;
+    padding: 5px 30px 5px 0px;
+    user-select: none; 
+    cursor: pointer;
+    position:relative;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-image: url(./content/unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 5px;
+        left: -25px
+    }
+}
+
+li.checked {
+    text-decoration: line-through;
+    color: sage;
+
+    &::before {
+        background-image: url(./content/checked.png);
+        background-size: cover;
+        background-position: center;
+        height: 20px;  
+    }
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+
+    &:hover{
+       background-color: $sage;
+    }
 }
