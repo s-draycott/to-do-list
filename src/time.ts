@@ -6,8 +6,9 @@ if (!timeOfDay ||!imgContainer) {
     }
 
 const currentHour = new Date().getHours()
+console.log(currentHour)
 if (currentHour < 12) {
-  timeOfDay.innerText = " Morning"
+  timeOfDay.innerText = "Morning"
   let icon = document.createElement("img")
   icon.src = "/src/content/sunrise-icon.png"
   icon.className = "headingContainer headingContainer__icon"
@@ -15,11 +16,11 @@ if (currentHour < 12) {
 } else if (currentHour < 18) {
   timeOfDay.innerText = "Afternoon"
   let icon = document.createElement("img")
-  icon.src = "/src/content/sun-icon-2048x2048-9jpgpgzh.png"
+  icon.src = "./src/content/sun-icon-2048x2048-9jpgpgzh.png"
   icon.className = "headingContainer headingContainer__icon"
   imgContainer.appendChild(icon)
 } else {
-  timeOfDay.innerText = " Evening"
+  timeOfDay.innerText = "Evening"
   let icon = document.createElement("img")
   icon.src = "/src/content/moon-icon-2048x2047-h5hsykin.png"
   icon.className = "headingContainer headingContainer__icon"
