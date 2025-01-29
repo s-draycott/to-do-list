@@ -16,7 +16,7 @@ if (currentHour < 12) {
 } else if (currentHour < 18) {
   timeOfDay.innerText = "Afternoon"
   let icon = document.createElement("img")
-  icon.src = "./src/content/sun-icon-2048x2048-9jpgpgzh.png"
+  icon.src = "./src/content/sun-icon.png"
   icon.className = "headingContainer headingContainer__icon"
   imgContainer.appendChild(icon)
 } else {
