@@ -2,12 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="./src/content/1950715.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>My To-Do List</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="toDoListContainer">
+      <h1>Good ...... this is your To-Do list for the day:</h1>
+      <h2>Your random fact for the day:</h2>
+      <button id="revealJokeBtn">Tell me a joke</button>
+        <p id="getJoke"></p>
+        <p id="getPunchline"></p>
+      <input placeholder="Add your task here"><button>Add</button>
+      <div class="listContainer">
+        <li>task1</li>
+        <li>task2</li>
+        <li>task3</li>
+
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
