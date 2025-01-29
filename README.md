@@ -7,13 +7,13 @@
         -   [] EXTENSION: add sunrise, sunset and night time icon based on time of day
     -   [x] Container for API generated random fact of the day
     -   [x] Input text box for adding new To-Dos with 'submit' button
-    -   [] List of alredy submited to-dos with a check marker next to it and a delete button to get rid of it
+    -   [x] List of alredy submited to-dos with a check marker next to it and a delete button to get rid of it
 -   SCSS (BEM!)
 -   TS
     -   [x] "Morning/Afternoon/Evening" inserted based on time of day
     -   [x] Random fact of the day generated below title
-    -   [] To-dos with check box ticked remain on screen but have line through
-    -   [] Delete button removes to-dos from the screen
+    -   [x] To-dos with check box ticked remain on screen but have line through
+    -   [x] Delete button removes to-dos from the screen
 
 # Functionality
 
