@@ -9,11 +9,11 @@ const currentHour = new Date().getHours()
 
 if (currentHour < 12) {
   timeOfDay.innerText = "Morning"
-  timeImg.src = "to-do-list/public/sunrise-icon.png";
+  timeImg.src = "/public/sunrise-icon.png";
 } else if (currentHour < 18) {
   timeOfDay.innerText = "Afternoon"
-  timeImg.src = "to-do-list/public/sun-icon.png";
+  timeImg.src = "/public/sun-icon.png";
 } else {
   timeOfDay.innerText = "Evening";
-  timeImg.src = "to-do-list/public/moon-icon.png";
+  timeImg.src = "/public/moon-icon.png";
 }
