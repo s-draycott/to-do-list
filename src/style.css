@@ -7,7 +7,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-image: url("./assets/background.png");
+  background-image: url("/public/background.png");
   background-size: calc(100vw + 100vh);
 }
 
@@ -37,7 +37,7 @@ button {
 
 .toDoListContainer {
   width: 60vw;
-  height: 70vh;
+  height: auto;
   background-color: #eff1ed;
   border-radius: 20px;
   padding: 20px;
@@ -155,16 +155,22 @@ button {
   user-select: none;
   cursor: pointer;
   position: relative;
+  font-size: 12px;
+}
+@media only screen and (min-width: 601px) {
+  .listItem {
+    font-size: 24px;
+  }
 }
 .listItem::before {
   content: " ";
   position: absolute;
   height: 20px;
   width: 20px;
-  background-image: url(./content/unchecked.png);
+  background-image: url(/public/unchecked.png);
   background-size: cover;
   background-position: center;
-  top: 5px;
+  top: 12px;
   left: -25px;
 }
 .listItem.checked {
@@ -172,7 +178,7 @@ button {
   color: sage;
 }
 .listItem.checked::before {
-  background-image: url(./content/checked.png);
+  background-image: url(/public/checked.png);
   background-size: cover;
   background-position: center;
   height: 20px;
@@ -180,8 +186,8 @@ button {
 .listItem__delete {
   position: absolute;
   right: -50px;
-  top: -2px;
-  padding: 8px 3px 0px 3px;
+  top: 2px;
+  padding: 3px;
   border-radius: 50%;
   height: 30px;
   width: 30px;
