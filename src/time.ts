@@ -1,29 +1,19 @@
 const timeOfDay = document.querySelector<HTMLSpanElement>("#timeOfDay");
-const imgContainer = document.querySelector<HTMLSpanElement>("#imgContainer")
+const timeImg = document.querySelector<HTMLImageElement>("#timeImg");
 
-if (!timeOfDay ||!imgContainer) {
+if (!timeOfDay || !timeImg) {
       throw new Error("Issues with the HTM selectors")
     }
 
 const currentHour = new Date().getHours()
-console.log(currentHour)
+
 if (currentHour < 12) {
   timeOfDay.innerText = "Morning"
-  let icon = document.createElement("img")
-  icon.src = "src/content/sunrise-icon.png"
-  icon.className = "headingContainer headingContainer__icon"
-  imgContainer.appendChild(icon)
+  timeImg.src = "/to-do-list/src/content/sunrise-icon.png";
 } else if (currentHour < 18) {
   timeOfDay.innerText = "Afternoon"
-  let icon = document.createElement("img")
-  icon.src = "src/content/sun-icon.png"
-  icon.className = "headingContainer headingContainer__icon"
-  imgContainer.appendChild(icon)
+  timeImg.src = "/to-do-list/src/content/sun-icon.png";
 } else {
-  timeOfDay.innerText = "Evening"
-  let icon = document.createElement("img")
-  icon.src = "src/content/moon-icon-2048x2047-h5hsykin.png"
-  icon.className = "headingContainer headingContainer__icon"
-  imgContainer.appendChild(icon)
-
+  timeOfDay.innerText = "Evening";
+  timeImg.src = "/to-do-list/src/content/moon-icon.png";
 }

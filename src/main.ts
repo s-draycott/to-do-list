@@ -16,10 +16,12 @@ const addFunc = () => {
     alert("Please enter a task in the box")
   } else {
     let li = document.createElement("li");
+    li.className = "listItem"
     li.innerHTML = input.value;
     listCont.append(li);
     input.value = "";
     let span = document.createElement("span");
+    span.className = "listItem listItem__delete" 
     span.innerHTML = "\u00d7"
     li.append(span);
   }
